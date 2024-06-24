@@ -9,6 +9,7 @@ export default function Home() {
         <form className="flex max-w-xl flex-col gap-4 bg-slate-400 p-10 rounded-md">
           <div className="flex gap-6">
             <div className="flex flex-col gap-4">
+              
               <div>
                 <div className="mb-2 block">
                   <Label htmlFor="firstName" value="First Name" />
@@ -16,7 +17,12 @@ export default function Home() {
                 <TextInput id="firstName" type="text" placeholder="First Name" required />
               </div>
 
-              
+              <div>
+                <div className="mb-2 block">
+                  <Label htmlFor="lastName" value="Last Name" />
+                </div>
+                <TextInput id="lastName" type="text" placeholder="Last Name" required />
+              </div>
 
               <div>
                 <div className="mb-2 block">
@@ -31,25 +37,9 @@ export default function Home() {
                 </div>
                 <TextInput id="dateOfBirth" type="date" placeholder="Date of Birth" required />
               </div>
-
-              <div>
-                <div className="mb-2 block">
-                  <Label htmlFor="password" value="Password" />
-                </div>
-                <TextInput id="password" type="password" placeholder="Password" required />
-              </div>
             </div>
 
-
-
             <div className="flex flex-col gap-4">
-
-            <div>
-                <div className="mb-2 block">
-                  <Label htmlFor="lastName" value="Last Name" />
-                </div>
-                <TextInput id="lastName" type="text" placeholder="Last Name" required />
-              </div>
               <div>
                 <div className="mb-2 block">
                   <Label htmlFor="address" value="Address" />
@@ -64,7 +54,12 @@ export default function Home() {
                 <TextInput id="phoneN" type="text" placeholder="Phone number" />
               </div>
 
-              
+              <div>
+                <div className="mb-2 block">
+                  <Label htmlFor="password" value="Password" />
+                </div>
+                <TextInput id="password" type="password" placeholder="Password" required />
+              </div>
 
               <div>
                 <div className="mb-2 block">
