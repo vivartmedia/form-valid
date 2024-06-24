@@ -9,9 +9,30 @@ export default function Home() {
         <form className="flex max-w-md flex-col gap-4 bg-slate-400 p-10 rounded-md">
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="email1" value="First Name" />
+              <Label htmlFor="firstName" value="First Name" />
             </div>
-            <TextInput id="email1" type="email" placeholder="First Name" required />
+            <TextInput id="firstName" type="text" placeholder="First Name" required />
+          </div>
+
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="lastName" value="Last Name" />
+            </div>
+            <TextInput id="lastName" type="text" placeholder="Last Name" required />
+          </div>
+
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="email1" value="Your email" />
+            </div>
+            <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
+          </div>
+
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="dateOfBirth" value="Date of Birth" />
+            </div>
+            <TextInput id="dateOfBirth" type="date" placeholder="Date of Birth" required />
           </div>
 
           <div>
@@ -34,26 +55,7 @@ export default function Home() {
             </div>
             <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
           </div>
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="email1" value="Your email" />
-            </div>
-            <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
-          </div>
 
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="email1" value="Your email" />
-            </div>
-            <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
-          </div>
-
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="email1" value="Your email" />
-            </div>
-            <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
-          </div>
           <div>
             <div className="mb-2 block">
               <Label htmlFor="password1" value="Your password" />
@@ -62,6 +64,7 @@ export default function Home() {
           </div>
 
           <Button type="submit">Submit</Button>
+
         </form>
         {/* ------------------------------------------------------------------------------------------------------------------------- */}
       </div>
