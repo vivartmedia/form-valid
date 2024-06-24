@@ -26,18 +26,19 @@ interface FormErrors {
   confPass?: string;
 }
 
-export default function Home() {
-  const [formValues, setFormValues] = useState<FormValues>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    dateOfBirth: "",
-    address: "",
-    phoneN: "",
-    password: "",
-    confPass: "",
-  });
+const initialFormValues: FormValues = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  dateOfBirth: "",
+  address: "",
+  phoneN: "",
+  password: "",
+  confPass: "",
+};
 
+export default function Home() {
+  const [formValues, setFormValues] = useState<FormValues>(initialFormValues);
   const [formErrors, setFormErrors] = useState<FormErrors>({});
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -51,7 +52,6 @@ export default function Home() {
   };
 
   const formatPhoneNumber = (value: string) => {
-    // Remove all non-numeric characters
     const numericValue = value.replace(/\D/g, "");
 
     let formattedValue = numericValue;
@@ -128,6 +128,8 @@ export default function Home() {
     if (validate()) {
       // Form is valid, submit the form
       console.log("Form submitted", formValues);
+      // Reset form values
+      setFormValues(initialFormValues);
     } else {
       console.log("Form has errors", formErrors);
     }
@@ -140,7 +142,7 @@ export default function Home() {
           <div className="flex gap-10">
             <div className="flex w-full flex-col gap-6">
               <div>
-                <div className="relative mb-2 flex items-center">
+                <div className="mb-2 flex items-center">
                   <Label className="text-lg font-semibold" htmlFor="firstName" value="First Name" />
                   <Tooltip content="Enter your first name. Max 100 characters." placement="right">
                     <HiInformationCircle className="ml-2 text-gray-500 cursor-pointer" />
