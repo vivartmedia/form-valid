@@ -128,25 +128,27 @@ export default function Home() {
     if (validate()) {
       // Form is valid, submit the form
       console.log("Form submitted", formValues);
+
       // Reset form values
       setFormValues(initialFormValues);
+      alert("Form submitted successfully!");
     } else {
       console.log("Form has errors", formErrors);
     }
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className="z-10 items-center justify-center font-mono text-sm lg:flex">
-        <form onSubmit={handleSubmit} className="flex max-w-4xl flex-col gap-6 bg-slate-400 p-10 rounded-md">
-          <div className="flex gap-10">
-            <div className="flex w-full flex-col gap-6">
+    <main className="flex min-h-screen flex-col items-center justify-center p-12">
+      <div className="z-10 w-full items-center justify-center font-mono text-sm lg:flex">
+        <form onSubmit={handleSubmit} className="flex  min-w-96 flex-col gap-6 bg-slate-400 p-6 rounded-md">
+          <div className="flex">
+            <div className="flex w-full flex-col gap-2">
 
               {/* ------------------------------------------------------- */}
-              <div className="flex w-full  gap-6">
-                <div>
-                  <div className="mb-2 flex items-center">
-                    <Label className="text-lg " htmlFor="firstName" value="First Name" />
+              <div className="flex flex-col w-full  gap-2">
+                <div className="w-full">
+                  <div className=" flex items-center">
+                    <Label className=" " htmlFor="firstName" value="First Name" />
                     <Tooltip content="Enter your first name. Max 100 characters." placement="right">
                       <HiInformationCircle className="ml-2 text-gray-500 cursor-pointer" />
                     </Tooltip>
@@ -155,9 +157,9 @@ export default function Home() {
                   {formErrors.firstName && <p className="text-red-600">{formErrors.firstName}</p>}
                 </div>
 
-                <div>
-                  <div className="mb-2 flex items-center">
-                    <Label className="text-lg " htmlFor="lastName" value="Last Name" />
+                <div className="w-full">
+                  <div className="flex items-center">
+                    <Label className="" htmlFor="lastName" value="Last Name" />
                     <Tooltip content="Enter your last name. Max 100 characters." placement="right">
                       <HiInformationCircle className="ml-2 text-gray-500 cursor-pointer" />
                     </Tooltip>
@@ -171,10 +173,10 @@ export default function Home() {
 
 
               {/* ------------------------------------------------------- */}
-              <div className="flex w-full  gap-6">
-                <div>
-                  <div className="mb-2 flex items-center">
-                    <Label className="text-lg " htmlFor="email" value="Your email" />
+              <div className="flex  flex-col w-full  gap-2">
+                <div className="w-full">
+                  <div className="flex items-center">
+                    <Label className="" htmlFor="email" value="Your email" />
                     <Tooltip content="Enter a valid email address." placement="right">
                       <HiInformationCircle className="ml-2 text-gray-500 cursor-pointer" />
                     </Tooltip>
@@ -183,9 +185,9 @@ export default function Home() {
                   {formErrors.email && <p className="text-red-600">{formErrors.email}</p>}
                 </div>
 
-                <div>
-                  <div className="mb-2 flex items-center">
-                    <Label className="text-lg " htmlFor="dateOfBirth" value="Date of Birth" />
+                <div className="w-full">
+                  <div className=" flex items-center">
+                    <Label className="" htmlFor="dateOfBirth" value="Date of Birth" />
                     <Tooltip content="Select your date of birth. Future dates are not allowed." placement="right">
                       <HiInformationCircle className="ml-2 text-gray-500 cursor-pointer" />
                     </Tooltip>
@@ -205,10 +207,10 @@ export default function Home() {
 
 
               {/* ------------------------------------------------------- */}
-              <div className="flex w-full  gap-6">
-                <div>
-                  <div className="mb-2 flex items-center">
-                    <Label className="text-lg " htmlFor="address" value="Address" />
+              <div className="flex flex-col w-full  gap-2">
+                <div className="w-full">
+                  <div className="flex items-center">
+                    <Label className="" htmlFor="address" value="Address" />
                     <Tooltip content="Enter your address. Max 100 characters." placement="right">
                       <HiInformationCircle className="ml-2 text-gray-500 cursor-pointer" />
                     </Tooltip>
@@ -217,9 +219,9 @@ export default function Home() {
                   {formErrors.address && <p className="text-red-600">{formErrors.address}</p>}
                 </div>
 
-                <div>
-                  <div className="mb-2 flex items-center">
-                    <Label className="text-lg " htmlFor="phoneN" value="Phone number" />
+                <div className="w-full">
+                  <div className="flex items-center">
+                    <Label className="" htmlFor="phoneN" value="Phone number" />
                     <Tooltip content="Enter your phone number in the format (123) 456-7890." placement="right">
                       <HiInformationCircle className="ml-2 text-gray-500 cursor-pointer" />
                     </Tooltip>
@@ -237,10 +239,10 @@ export default function Home() {
 
 
               {/* ------------------------------------------------------- */}
-              <div className="flex w-full  gap-6">
-                <div>
-                <div className="mb-2 flex items-center">
-                  <Label className="text-lg " htmlFor="password" value="Password" />
+              <div className="flex flex-col w-full  gap-2">
+                <div className="w-full">
+                <div className="flex items-center">
+                  <Label className=" " htmlFor="password" value="Password" />
                   <Tooltip content="Password must be at least 15 characters, include 1 uppercase, 1 number, and 1 special character from (?@!#$%^&*)." placement="right">
                     <HiInformationCircle className="ml-2 text-gray-500 cursor-pointer" />
                   </Tooltip>
@@ -249,9 +251,9 @@ export default function Home() {
                 {formErrors.password && <p className="text-red-600">{formErrors.password}</p>}
               </div>
 
-                <div>
-                  <div className="mb-2 flex items-center">
-                    <Label className="text-lg " htmlFor="confPass" value="Confirm Password" />
+                <div className="w-full">
+                  <div className="flex items-center">
+                    <Label className=" " htmlFor="confPass" value="Confirm Password" />
                     <Tooltip content="Enter the same password as above." placement="right">
                       <HiInformationCircle className="ml-2 text-gray-500 cursor-pointer" />
                     </Tooltip>
