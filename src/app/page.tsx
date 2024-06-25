@@ -134,6 +134,7 @@ export default function Home() {
       alert("Form submitted successfully!");
     } else {
       console.log("Form has errors", formErrors);
+      alert("Form errors, please check the form inputs.");
     }
   };
 
