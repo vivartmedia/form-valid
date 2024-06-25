@@ -124,6 +124,11 @@ export default function Home() {
     }
 
     // Validation for password.
+// Regex regular expression checks if a password meets the following criteria:
+// - At least one uppercase letter (?=.*[A-Z])
+// - At least one digit (number) (?=.*\d)
+// - At least one special character from this set: ?@!#$%^&*   (?=.*[?@!#$%^&*])
+// - The password must be at least 15 characters long and can contain uppercase letters, lowercase letters, digits, and the specified special characters
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[?@!#$%^&*])[A-Za-z\d?@!#$%^&*]{15,}$/;
     if (!formValues.password) {
       errors.password = "Password is required";
